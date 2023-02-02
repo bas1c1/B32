@@ -1,0 +1,47 @@
+memory:
+65535 bytes
+
+instr set:
+
+01.mov 		(mov ax 12) (to reg)
+02.set 		(set 3057 3f) (to ram)
+03.free		(free 3057) (free val from ram by index)
+set_vidmem	(set_vidmem 0 <0-255>) (to vidmem, index:color) - ASM INSTR
+05.get 		(get 3057 ax) (get from ram)
+06.stor 	(stor ax 3057) (stor to ram)
+07.jmp 		(jmp 0) (jumps to addr)
+08.jmpz		(jmpz 0) (jumps if ff is zero)
+
+09.grt		(grt ax 0) (adds to ff 0 if first val > second val)
+0a.lt 		(lt ax 0) (adds to ff 0 if first val < second val)
+0b.eq		(eq ax 0) (adds to ff 0 if first val == second val)
+0c.neq		(neq ax 0) (adds to ff 0 if first val != second val)
+
+0d.mgrt		(mgrt ax 3057) (adds to ff 0 if first val > second val)
+0e.mlt		(mlt ax 3057) (adds to ff 0 if first val < second val)
+0f.meq		(meq ax 3057) (adds to ff 0 if first val == second val)
+10.mneq		(mneq ax 3057) (adds to ff 0 if first val != second val)
+
+11.add 		(add ax 10) (add)
+12.sub		(sub ax 10 || sub 10 ax) (sub)
+13.mul		(mul ax 10) (mul)
+14.div		(div ax 10 || div 10 ax) (div)
+
+15.madd		(madd ax 3057) (madd)
+16.msub		(msub ax 3057 || msub 10 ax) (msub)
+17.mmul		(mmul ax 3057) (mmul)
+18.mdiv		(mdiv ax 3057 || mdiv 10 ax) (mdiv)
+
+19.write	(write 0 32) (io write to the device)
+1a.read 	(read 0) (io read from the device to ff register)
+1b.hlt		(hlt) (stop the processor)
+
+regs:
+ax - 1
+bx - 2
+cx - 3
+dx - 4
+ex - 5
+fx - 6
+
+ff - dop. (0 memory addres)
