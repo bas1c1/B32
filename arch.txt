@@ -6,7 +6,6 @@ instr set:
 01.mov 		(mov ax 12) (to reg)
 02.set 		(set 3057 3f) (to ram)
 03.free		(free 3057) (free val from ram by index)
-set_vidmem	(set_vidmem 0 <0-255>) (to vidmem, index:color) - ASM INSTR
 05.get 		(get 3057 ax) (get from ram)
 06.stor 	(stor ax 3057) (stor to ram)
 07.jmp 		(jmp 0) (jumps to addr)
