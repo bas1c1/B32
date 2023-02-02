@@ -2,52 +2,8 @@
 #include "arch.h"
 
 #include <stdio.h>
-//#include <limits.h>
-/*void memcpy(s8 *f, s8 *s, size_t size) {
-	while (size--)
-        *f++ = *s++;
-}*/
 
 extern regs reg;
-/*
-s32 RGBA2DWORD(int iR, int iG, int iB, int iA)
-{
-    return ((iA * 256 + iR) * 256 + iG) * 256 + iB;
-}
-
-struct RGBACOLOR {
-    int r;
-    int g;
-    int b;
-    int a;
-};
-
-struct RGBACOLOR color_new(int iR, int iG, int iB, int iA) {
-    struct RGBACOLOR col;
-    col.r = iR;
-    col.g = iG;
-    col.b = iB;
-    col.a = iA;
-    return col;
-}
-
-s16 fromRGB(s16 r, s16 g, s16 b)
-{
-    s16 result = 0;
-    result |= (r & 0xFF) << 16;
-    result |= (g & 0xFF) << 8;
-    result |= (b & 0xFF);
-    return result;
-}
- 
-int *toRGB(s16 c)
-{
-    int rgb[3];
-    rgb[0] = (c >> 16) & 0xFF;
-    rgb[1] = (c >> 8) & 0xFF;
-    rgb[2] = (c) & 0xFF;
-    return rgb;
-}*/
 
 s32 s8ts32(s8 *value) {
 	s32 l = 0;
